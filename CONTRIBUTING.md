@@ -34,7 +34,7 @@ To add yourself to the table of contributors on the `README.md`, please use the
 automated script as part of your PR:
 
 ```console
-npm run contributor:add <github-account-name> <contribution-task>,<contribution-task>,...
+npm run contributors:add <github-account-name> <contribution-task>,<contribution-task>,...
 ```
 
 ### contribution-task list:

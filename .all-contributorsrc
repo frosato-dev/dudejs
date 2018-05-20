@@ -39,6 +39,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "fbarrailla",
+      "name": "François Barrailla",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11709778?v=4",
+      "profile": "https://github.com/fbarrailla",
+      "contributions": [
+        "test",
+        "doc"
+      ]
     }
   ]
 }

@@ -1,5 +1,5 @@
 [![License][license-image]][license-url]
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 [![styled with prettier][prettier-image]][prettier-url]
 [![js-standard-style][eslint-image]][eslint-url]
 
@@ -38,7 +38,7 @@ $ yarn duke:lint
 * Format code: `$ npm run format`
 * Lint code: `$ npm run lint`
 * Build: `$ npm run build`
-* Add contributor: `$ npm run contributor add <github-username> <contribution-type>`
+* Add contributor: `$ npm run contributors:add <github-username> <contribution-type>`
 * Deploy: `$ npm run deploy`
 
 
@@ -48,8 +48,8 @@ Thanks goes to these people :
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/31624379?v=4" width="100px;"/><br /><sub><b>François Rosato</b></sub>](https://github.com/frosato-ekino)<br />[💻](https://github.com/knuckle/knuckle/commits?author=frosato-ekino "Code") [📖](https://github.com/knuckle/knuckle/commits?author=frosato-ekino "Documentation") [🤔](#ideas-frosato-ekino "Ideas, Planning, & Feedback") | [<img src="https://avatars3.githubusercontent.com/u/1179174?v=4" width="100px;"/><br /><sub><b>Guillaume AMAT</b></sub>](https://github.com/GuillaumeAmat)<br />[💻](https://github.com/knuckle/knuckle/commits?author=GuillaumeAmat "Code") [📖](https://github.com/knuckle/knuckle/commits?author=GuillaumeAmat "Documentation") [🤔](#ideas-GuillaumeAmat "Ideas, Planning, & Feedback") | [<img src="https://avatars1.githubusercontent.com/u/6979207?v=4" width="100px;"/><br /><sub><b>Julien Viala</b></sub>](https://github.com/mr-wildcard)<br />[🤔](#ideas-mr-wildcard "Ideas, Planning, & Feedback") |
-| :---: | :---: | :---: |
+| [<img src="https://avatars3.githubusercontent.com/u/31624379?v=4" width="100px;"/><br /><sub><b>François Rosato</b></sub>](https://github.com/frosato-ekino)<br />[💻](https://github.com/knuckle/knuckle/commits?author=frosato-ekino "Code") [📖](https://github.com/knuckle/knuckle/commits?author=frosato-ekino "Documentation") [🤔](#ideas-frosato-ekino "Ideas, Planning, & Feedback") | [<img src="https://avatars3.githubusercontent.com/u/1179174?v=4" width="100px;"/><br /><sub><b>Guillaume AMAT</b></sub>](https://github.com/GuillaumeAmat)<br />[💻](https://github.com/knuckle/knuckle/commits?author=GuillaumeAmat "Code") [📖](https://github.com/knuckle/knuckle/commits?author=GuillaumeAmat "Documentation") [🤔](#ideas-GuillaumeAmat "Ideas, Planning, & Feedback") | [<img src="https://avatars1.githubusercontent.com/u/6979207?v=4" width="100px;"/><br /><sub><b>Julien Viala</b></sub>](https://github.com/mr-wildcard)<br />[🤔](#ideas-mr-wildcard "Ideas, Planning, & Feedback") | [<img src="https://avatars2.githubusercontent.com/u/11709778?v=4" width="100px;"/><br /><sub><b>François Barrailla</b></sub>](https://github.com/fbarrailla)<br />[⚠️](https://github.com/knuckle/knuckle/commits?author=fbarrailla "Tests") [📖](https://github.com/knuckle/knuckle/commits?author=fbarrailla "Documentation") |
+| :---: | :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the
