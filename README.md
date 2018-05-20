@@ -6,7 +6,7 @@
 
 
 [license-image]: https://img.shields.io/github/license/frosato-ekino/react-sketch-book.svg?style=flat-square
-[license-url]: https://github.com/GuillaumeAmat/knuckle/blob/master/LICENSE
+[license-url]: https://github.com/frosato-ekino/dukejs/blob/master/LICENSE
 [prettier-image]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square
 [prettier-url]: https://github.com/prettier/prettier
 [eslint-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
@@ -16,35 +16,21 @@
 [eslint-config-path]: /src/configs/eslintrc.js
 
 
-# Knuckle
+# DukeJS
 
 
 ## How to use scripts
 
-```json
-"scripts": {
-    "format": "knuckle prettier 'src/**/*.{js,json}' --write",
-    "lint": "knuckle eslint src",
-    "lint:fix": "knuckle eslint src --fix"
-}
+```sh
+$ npm run duke:format
+$ npm run duke:lint
 ```
 
-### How to extends configurations
-
-#### prettier.config.js
-Prettier configuration can be extended or replaced by writing your own `prettier.config.js` in your project root folder.
-```js
-const baseConfig = require('knuckle/dist/configs/prettierrc')
-
-module.exports = {
-    ...baseConfig,
-    bracketSpacing: true, // overriding rules
-    jsxBracketSameLine: true, // overriding rules
-}
+```sh
+$ yarn duke:format
+$ yarn duke:lint
 ```
-check the base configuration [here][prettier-config-path].
 
-:warning: `prettier.config.js` is the only prettier configuration file format supported so far.
 
 ## Development commands
 

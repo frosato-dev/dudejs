@@ -4,6 +4,6 @@
 import program from "commander";
 
 program
-  .command("eslint [path]", "run eslint", { noHelp: true })
-  .command("prettier [filename]", "run prettier", { noHelp: true })
+  .command("lint", "run lint", { noHelp: true })
+  .command("format", "run format", { noHelp: true })
   .parse(process.argv);
