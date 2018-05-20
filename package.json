@@ -1,16 +1,16 @@
 {
-    "name": "knuckle",
+    "name": "dukejs",
     "version": "0.1.0",
     "description": "Front end script",
     "license": "MIT",
     "author": "",
-    "homepage": "https://github.com/GuillaumeAmat/knuckle#readme",
+    "homepage": "https://github.com/frosato-ekino/dukejs#readme",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/GuillaumeAmat/knuckle.git"
+        "url": "git+https://github.com/frosato-ekino/dukejs.git"
     },
     "bugs": {
-        "url": "https://github.com/GuillaumeAmat/knuckle/issues"
+        "url": "https://github.com/frosato-ekino/dukejs/issues"
     },
     "keywords": [
         "script",
@@ -26,7 +26,7 @@
         "dist"
     ],
     "bin": {
-        "knuckle": "dist/bin/index.js"
+        "dukejs": "dist/bin/index.js"
     },
     "scripts": {
         "format": "prettier --write 'src/**/*.{js,json}'",
@@ -61,7 +61,7 @@
     },
     "dependencies": {
         "babel-eslint": "^8.2.2",
-        "commander": "^2.15.0",
+        "commander": "^2.15.1",
         "eslint": "^4.18.2",
         "eslint-config-last": "0.0.5",
         "eslint-config-prettier": "^2.9.0",
