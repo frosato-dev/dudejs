@@ -9,10 +9,8 @@
 
 [travis-image]: https://travis-ci.org/frosato-ekino/dukejs.svg?branch=develop
 [travis-url]: https://travis-ci.org/frosato-ekino/dukejs
-
-[coveralls-image]: https://coveralls.io/repos/github/https://github.com/frosato-ekino/dukejs/badge.svg?branch=develop
-[coveralls-url]: https://coveralls.io/github/https://github.com/frosato-ekino/dukejs?branch=develop
-
+[coveralls-image]: https://coveralls.io/repos/github/frosato-ekino/dukejs/badge.svg
+[coveralls-url]: https://coveralls.io/github/frosato-ekino/dukejs
 [license-image]: https://img.shields.io/github/license/frosato-ekino/react-sketch-book.svg?style=flat-square
 [license-url]: https://github.com/frosato-ekino/dukejs/blob/master/LICENSE
 [prettier-image]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square
