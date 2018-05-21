@@ -1,6 +1,6 @@
-CLIENT_DIR=/tmp/dukejs-client
+CLIENT_DIR=/tmp/dudejs-client
 
-# link dukejs as global node module
+# link dudejs as global node module
 npm link
 
 # clean old tmp directory
@@ -11,4 +11,4 @@ cd $CLIENT_DIR
 mkdir src
 
 npm init -y
-npm link dukejs
+npm link dudejs

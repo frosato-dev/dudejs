@@ -1,16 +1,16 @@
 {
-    "name": "dukejs",
+    "name": "dudejs",
     "version": "0.1.0",
     "description": "Front end script",
     "license": "MIT",
     "author": "",
-    "homepage": "https://github.com/frosato-ekino/dukejs#readme",
+    "homepage": "https://github.com/frosato-ekino/dudejs#readme",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/frosato-ekino/dukejs.git"
+        "url": "git+https://github.com/frosato-ekino/dudejs.git"
     },
     "bugs": {
-        "url": "https://github.com/frosato-ekino/dukejs/issues"
+        "url": "https://github.com/frosato-ekino/dudejs/issues"
     },
     "keywords": [
         "script",
@@ -26,7 +26,7 @@
         "dist"
     ],
     "bin": {
-        "dukejs": "dist/bin/index.js"
+        "dudejs": "dist/bin/index.js"
     },
     "scripts": {
         "format": "prettier --write 'src/**/*.{js,json}'",

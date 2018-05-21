@@ -4,5 +4,5 @@ it("returns the path to the client working directory", () => {
   const workingDir = getClientWorkingDir();
 
   expect(workingDir).toBeDefined();
-  expect(workingDir).toMatch(/\/dukejs$/);
+  expect(workingDir).toMatch(/\/dudejs$/);
 });

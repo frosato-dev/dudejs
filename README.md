@@ -7,12 +7,12 @@
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
 
-[travis-image]: https://travis-ci.org/frosato-ekino/dukejs.svg?branch=develop
-[travis-url]: https://travis-ci.org/frosato-ekino/dukejs
-[coveralls-image]: https://coveralls.io/repos/github/frosato-ekino/dukejs/badge.svg
-[coveralls-url]: https://coveralls.io/github/frosato-ekino/dukejs
+[travis-image]: https://travis-ci.org/frosato-ekino/dudejs.svg?branch=develop
+[travis-url]: https://travis-ci.org/frosato-ekino/dudejs
+[coveralls-image]: https://coveralls.io/repos/github/frosato-ekino/dudejs/badge.svg
+[coveralls-url]: https://coveralls.io/github/frosato-ekino/dudejs
 [license-image]: https://img.shields.io/github/license/frosato-ekino/react-sketch-book.svg?style=flat-square
-[license-url]: https://github.com/frosato-ekino/dukejs/blob/master/LICENSE
+[license-url]: https://github.com/frosato-ekino/dudejs/blob/master/LICENSE
 [prettier-image]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square
 [prettier-url]: https://github.com/prettier/prettier
 [eslint-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
@@ -22,20 +22,20 @@
 [eslint-config-path]: /src/configs/eslintrc.js
 
 
-# DukeJS
+# DudeJS
 
 
 ## How to use scripts
 
 ```sh
-$ npm run duke:format
-$ npm run duke:lint
+$ npm run dude:format
+$ npm run dude:lint
 ```
 
 
 ```sh
-$ yarn duke:format
-$ yarn duke:lint
+$ yarn dude:format
+$ yarn dude:lint
 ```
 
 

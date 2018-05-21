@@ -10,11 +10,11 @@ it("launches eslint command with expected arguments", () => {
     status: 0,
   }));
 
-  require("../dukejs-lint");
+  require("../dudejs-lint");
 
   expect(mockSpawn).toHaveBeenCalledWith(
     expect.stringMatching(/\/eslint\/bin\/eslint.js$/),
-    [expect.stringMatching(/\/dukejs\/src$/), "--config", "./src/configs/eslintrc.js", "--fix"],
+    [expect.stringMatching(/\/dudejs\/src$/), "--config", "./src/configs/eslintrc.js", "--fix"],
     { stdio: "inherit" },
   );
   expect(process.exit).toHaveBeenCalledWith(0);

@@ -9,7 +9,7 @@ beforeAll(() => {
 });
 
 it("should pass", () => {
-  execSync("npx dukejs format", { cwd: CLIENT_DIR });
+  execSync("npx dudejs format", { cwd: CLIENT_DIR });
   const output = fs.readFileSync(FILE_PATH);
 
   expect(output.toString()).toBe(`const hello = 'Hello'\n`);
