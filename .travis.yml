@@ -3,5 +3,9 @@ cache:
   yarn: true
 node_js:
 - '8.4'
-script:
-- npx jest
+
+jobs:
+  include:
+    - stage: Tests
+      node_js: node
+      script: jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
