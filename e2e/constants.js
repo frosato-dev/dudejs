@@ -1,1 +1,1 @@
-export const CLIENT_DIR = "/tmp/dukejs-client/";
+export const CLIENT_DIR = "/tmp/dudejs-client/";

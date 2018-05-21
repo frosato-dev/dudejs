@@ -11,7 +11,7 @@ beforeAll(() => {
 it("should pass", () => {
   let stdout;
   try {
-    execSync("npx dukejs lint", { cwd: CLIENT_DIR });
+    execSync("npx dudejs lint", { cwd: CLIENT_DIR });
   } catch (err) {
     stdout = err.stdout.toString();
   }

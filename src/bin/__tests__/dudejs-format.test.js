@@ -10,7 +10,7 @@ it("launches prettier command with expected arguments", () => {
     status: 0,
   }));
 
-  require("../dukejs-format");
+  require("../dudejs-format");
 
   expect(mockSpawn).toHaveBeenCalledWith(
     expect.stringMatching(/\/prettier\/bin-prettier.js$/),
