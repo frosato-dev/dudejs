@@ -7,8 +7,9 @@
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
 
-[travis-image]: https://travis-ci.org/https://github.com/frosato-ekino/dukejs.svg?branch=develop
-[travis-url]: https://travis-ci.org/https://github.com/frosato-ekino/dukejs
+[travis-image]: https://travis-ci.org/frosato-ekino/dukejs.svg?branch=develop
+[travis-url]: https://travis-ci.org/frosato-ekino/dukejs
+
 [coveralls-image]: https://coveralls.io/repos/github/https://github.com/frosato-ekino/dukejs/badge.svg?branch=develop
 [coveralls-url]: https://coveralls.io/github/https://github.com/frosato-ekino/dukejs?branch=develop
 
