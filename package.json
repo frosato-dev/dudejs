@@ -37,8 +37,8 @@
         "lint:test": "eslint src",
         "precommit": "lint-staged",
         "commitmsg": "commitlint -e $GIT_PARAMS",
-        "test": "echo todo",
-        "build": "babel src -d dist",
+        "test": "jest --watchAll",
+        "build": "babel src -d dist --ignore '**/*.test.js'",
         "postinstall": "npm run build",
         "deploy": "npm publish",
         "contributors:add": "all-contributors add",
@@ -57,7 +57,9 @@
         "babel-preset-latest": "^6.24.1",
         "cross-spawn": "^6.0.5",
         "husky": "^0.14.3",
-        "lint-staged": "^4.2.2"
+        "jest": "^22.4.4",
+        "lint-staged": "^4.2.2",
+        "mock-fs": "^4.5.0"
     },
     "dependencies": {
         "babel-eslint": "^8.2.2",

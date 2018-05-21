@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns expected eslint configuration 1`] = `
+Object {
+  "env": Object {
+    "browser": true,
+    "es6": true,
+    "jest": Object {
+      "global": true,
+    },
+    "node": true,
+  },
+  "extends": Array [
+    "eslint:recommended",
+    "prettier",
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": Object {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+  },
+  "plugins": Array [
+    "prettier",
+  ],
+  "rules": Object {
+    "prettier/prettier": Array [
+      "error",
+      Object {
+        "inheritedPrettierConfig": true,
+      },
+    ],
+  },
+}
+`;
+
+exports[`returns expected eslint configuration when jest found 1`] = `
+Object {
+  "env": Object {
+    "browser": true,
+    "es6": true,
+    "jest": Object {
+      "global": true,
+    },
+    "node": true,
+  },
+  "extends": Array [
+    "eslint:recommended",
+    "prettier",
+    "plugin:jest/recommended",
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": Object {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+  },
+  "plugins": Array [
+    "prettier",
+    "jest",
+  ],
+  "rules": Object {
+    "prettier/prettier": Array [
+      "error",
+      Object {
+        "inheritedPrettierConfig": true,
+      },
+    ],
+  },
+}
+`;
+
+exports[`returns expected eslint configuration when react found 1`] = `
+Object {
+  "env": Object {
+    "browser": true,
+    "es6": true,
+    "jest": Object {
+      "global": true,
+    },
+    "node": true,
+  },
+  "extends": Array [
+    "eslint:recommended",
+    "prettier",
+    "plugin:react/recommended",
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": Object {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+  },
+  "plugins": Array [
+    "prettier",
+    "react",
+  ],
+  "rules": Object {
+    "prettier/prettier": Array [
+      "error",
+      Object {
+        "inheritedPrettierConfig": true,
+      },
+    ],
+  },
+}
+`;
