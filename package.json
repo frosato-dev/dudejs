@@ -90,5 +90,11 @@
             "lint:staged",
             "git add"
         ]
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.js",
+            "!**/node_modules/**"
+        ]
     }
 }
