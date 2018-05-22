@@ -1,3 +1,4 @@
+import program from "commander";
 import spawn from "cross-spawn";
 
 import getClientWorkingDir from "../utils/getClientWorkingDir";
@@ -7,13 +8,17 @@ import getPathToBin from "../utils/getPathToBin";
 const PRETTIER_CONFIG_FILENAME = "prettierrc.js";
 const PRETTIER_IGNORE_FILENAME = "prettierignore";
 
+program.parse(process.argv);
+
+const [fileName] = program.args;
+
 const clientWorkingDir = getClientWorkingDir();
 
 const prettierConfig = getLocalConfigurationFile(PRETTIER_CONFIG_FILENAME);
 const prettierIgnore = getLocalConfigurationFile(PRETTIER_IGNORE_FILENAME);
 
 const buildPathFromClientWorkingDir = (...path) => path.join(clientWorkingDir, ...path);
-const targetPath = buildPathFromClientWorkingDir("src/**/*.{js,json}");
+const targetPath = fileName || buildPathFromClientWorkingDir("src/**/*.{js,json}");
 
 const commandArgs = [
   targetPath,
