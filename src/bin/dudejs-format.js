@@ -1,8 +1,8 @@
 import spawn from "cross-spawn";
 
-import getClientWorkingDir from "./utils/getClientWorkingDir";
-import getLocalConfigurationFile from "./utils/getLocalConfigurationFile";
-import getPathToBin from "./utils/getPathToBin";
+import getClientWorkingDir from "../utils/getClientWorkingDir";
+import getLocalConfigurationFile from "../utils/getLocalConfigurationFile";
+import getPathToBin from "../utils/getPathToBin";
 
 const PRETTIER_CONFIG_FILENAME = "prettierrc.js";
 const PRETTIER_IGNORE_FILENAME = "prettierignore";

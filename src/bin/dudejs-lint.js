@@ -1,9 +1,9 @@
 import spawn from "cross-spawn";
 import path from "path";
 
-import getClientWorkingDir from "./utils/getClientWorkingDir";
-import getPathToBin from "./utils/getPathToBin";
-import getLocalConfigurationFile from "./utils/getLocalConfigurationFile";
+import getClientWorkingDir from "../utils/getClientWorkingDir";
+import getPathToBin from "../utils/getPathToBin";
+import getLocalConfigurationFile from "../utils/getLocalConfigurationFile";
 
 const workingDirectory = getClientWorkingDir();
 
