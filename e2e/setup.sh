@@ -1,7 +1,8 @@
 CLIENT_DIR=/tmp/dudejs-client
 
-# link dudejs as global node module
-npm link
+# build & package dudejs locally
+npm run build
+PKG=$(pwd)/$(npm pack . | tail -1)
 
 # clean old tmp directory
 [ ! -d $CLIENT_DIR ] || rm -rf $CLIENT_DIR
@@ -11,4 +12,4 @@ cd $CLIENT_DIR
 mkdir src
 
 npm init -y
-npm link dudejs
+npm i $PKG

@@ -16,6 +16,7 @@ coverage
 
 # Build
 dist
+dudejs-*.tgz
 
 # IDE
 .idea
