@@ -3,7 +3,7 @@
 "use strict";
 
 import prettierConfig from "./prettierrc";
-import hasDependency from "../bin/utils/hasDependency";
+import hasDependency from "../utils/hasDependency";
 
 // To Read
 // https://github.com/babel/babel-eslint

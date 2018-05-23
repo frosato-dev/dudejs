@@ -1,6 +1,6 @@
 const mockHasDependency = jest.fn();
 
-jest.mock("../../bin/utils/hasDependency", () => mockHasDependency);
+jest.mock("../../utils/hasDependency", () => mockHasDependency);
 jest.mock("../prettierrc", () => ({
   inheritedPrettierConfig: true,
 }));
@@ -10,19 +10,19 @@ beforeEach(() => {
 });
 
 it("returns expected eslint configuration", () => {
-  require("../../bin/utils/hasDependency").mockImplementation(() => false);
+  require("../../utils/hasDependency").mockImplementation(() => false);
 
   expect(require("../eslintrc")).toMatchSnapshot();
 });
 
 it("returns expected eslint configuration when react found", () => {
-  require("../../bin/utils/hasDependency").mockImplementation(name => name === "react");
+  require("../../utils/hasDependency").mockImplementation(name => name === "react");
 
   expect(require("../eslintrc")).toMatchSnapshot();
 });
 
 it("returns expected eslint configuration when jest found", () => {
-  require("../../bin/utils/hasDependency").mockImplementation(name => name === "jest");
+  require("../../utils/hasDependency").mockImplementation(name => name === "jest");
 
   expect(require("../eslintrc")).toMatchSnapshot();
 });
