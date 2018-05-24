@@ -1,5 +1,6 @@
 import program from "commander";
 import spawn from "cross-spawn";
+import path from "path";
 
 import getClientWorkingDir from "../utils/getClientWorkingDir";
 import getLocalConfigurationFile from "../utils/getLocalConfigurationFile";
@@ -10,18 +11,19 @@ const PRETTIER_IGNORE_FILENAME = "prettierignore";
 
 program.parse(process.argv);
 
-const [fileName] = program.args;
+const fileNames = program.args;
 
 const clientWorkingDir = getClientWorkingDir();
 
 const prettierConfig = getLocalConfigurationFile(PRETTIER_CONFIG_FILENAME);
 const prettierIgnore = getLocalConfigurationFile(PRETTIER_IGNORE_FILENAME);
 
-const buildPathFromClientWorkingDir = (...path) => path.join(clientWorkingDir, ...path);
-const targetPath = fileName || buildPathFromClientWorkingDir("src/**/*.{js,json}");
+const targetFiles = fileNames.length
+  ? fileNames
+  : [path.join(clientWorkingDir, "src/**/*.{js,json}")];
 
 const commandArgs = [
-  targetPath,
+  ...targetFiles,
   "--config",
   prettierConfig,
   "--ignore-path",
