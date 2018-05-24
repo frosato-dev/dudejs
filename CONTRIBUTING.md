@@ -27,6 +27,20 @@ Thanks for being willing to contribute!
 > branch. Whenever you want to update your version of `master`, do a regular
 > `git pull`.
 
+## Running tests
+
+Please make sure to run the tests before you commit your changes.
+
+#### Unit tests command:
+```
+npm run test
+```
+
+#### End to end tests command:
+```
+npm run e2e
+```
+
 ## Add yourself as a contributor
 
 This project follows the [all contributors][all-contributors] specification.
@@ -74,19 +88,18 @@ releases and generate a changelog based on the commit history. So we follow
 convention if you don't want to. Just know that when we merge your commit, we'll
 probably use "Squash and Merge" so we can change the commit message :)
 
-Please make sure to run the tests before you commit your changes. You can run
-`npm run test:update` which will update any snapshots that need updating.
-Make sure to include those changes (if they exist) in your commit.
 
 ### git hooks
 
-There are git hooks set up with this project that are automatically installed
+There is a git pre-commit hook set up with this project that is automatically installed
 when you install dependencies. They're really handy.
 
-One of the things that the git hooks does is automatically format the files you
+One of the things that the hook does is automatically format the files you
 change. It does this by reformating the entire file and running `git add` on
 the file after. This breaks workflows where you're trying to commit portions of
 the file only. You can always run your commit with `--no-verify`.
+
+It will also run both unit and end to end tests.
 
 ## Making a release
 
