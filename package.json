@@ -77,7 +77,8 @@
         "eslint-plugin-react": "^7.7.0",
         "lodash": "^4.17.5",
         "prettier": "^1.7.0",
-        "read-pkg-up": "^3.0.0"
+        "read-pkg-up": "^3.0.0",
+        "staged-git-files": "^1.1.1"
     },
     "lint-staged": {
         "src/**/*.json": [
@@ -88,6 +89,12 @@
             "format:staged",
             "lint:staged",
             "git add"
+        ]
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.js",
+            "!**/node_modules/**"
         ]
     }
 }

@@ -2,7 +2,6 @@ CLIENT_DIR=/tmp/dudejs-client
 DUDEJS_DIR=${PWD}
 
 # Build & package dudejs locally
-npm run build
 PKG=$DUDEJS_DIR/$(npm pack . | tail -1)
 
 # Clean old tmp directory
