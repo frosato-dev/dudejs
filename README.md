@@ -22,29 +22,48 @@
 
 # DudeJS
 
+Tired of setup but you like to roll you project like a booling ball: formatting and linting your code while insuring consistent commit messages.
+The dude to the rescue!
 
-## How to use scripts
+When your project is up and running and your git is init just install `dudejs` and you are ready to bowling.
+
+Cheers,
+
+"His dudeness, duder, or el dudorino"
+
+## Install
+Just run the setup command in your project folder:
+```sh
+$ npm i dudejs --save-dev
+```
+or
+```sh
+$ yarn dudejs --dev
+```
+
+and... you are done !
+
+
+## What it does ?
+
+### Setup nice commands
+DudeJS will add two nice commands to format and lint you code in your `package.json`.
 
 ```sh
 $ npm run dude:format
 $ npm run dude:lint
 ```
-
-
+or
 ```sh
 $ yarn dude:format
 $ yarn dude:lint
 ```
 
+### Add nice git hooks
 
-## Development commands
-
-* Run tests: `$ npm run test`
-* Format code: `$ npm run format`
-* Lint code: `$ npm run lint`
-* Build: `$ npm run build`
-* Add contributor: `$ npm run contributors:add <github-username> <contribution-type>`
-* Deploy: `$ npm run deploy`
+Indeed, if your git is init by the time you install DudeJS it will setup git hooks for you:
+* `pre-commit` that runs the lint and format commands on your stagged files
+* `commit-msg` that checks your commit message are properlly formatted because "This is a league game"!
 
 
 ## Contributors

@@ -41,6 +41,17 @@ npm run test
 npm run e2e
 ```
 
+## Development commands
+
+* Run unit tests: `$ npm run test`
+* Run end to end tests: `npm run e2e`
+* Format code: `$ npm run format`
+* Lint code: `$ npm run lint`
+* Build: `$ npm run build`
+* Add contributor: `$ npm run contributors:add <github-username> <contribution-type>`
+* Deploy: `$ npm run deploy`
+
+
 ## Add yourself as a contributor
 
 This project follows the [all contributors][all-contributors] specification.
