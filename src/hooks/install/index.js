@@ -1,1 +1,3 @@
-import "./pre-commit";
+import precommit from "./pre-commit";
+
+precommit();
