@@ -15,7 +15,7 @@ exports[`should process staged files on pre-commit: formatted js file 1`] = `
 
 exports[`should process staged files on pre-commit: pre-commit error output 1`] = `
 "
-/private/tmp/dudejs-client/src/on-stage.js
+/tmp/dudejs-client/src/on-stage.js
   1:7  error  'hello' is assigned a value but never used  no-unused-vars
 
 ✖ 1 problem (1 error, 0 warnings)

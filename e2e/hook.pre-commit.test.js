@@ -1,5 +1,5 @@
 import path from "path";
-import { exec, fileExists, read, write, cleanSrcDirectory } from "./utils";
+import { exec, fileExists, read, write, cleanSrcDirectory, unifyTmpDir } from "./utils";
 import { CLIENT_DIR } from "./constants";
 
 const HOOK_PATH = path.join(CLIENT_DIR, ".git", "hooks", "pre-commit");
@@ -26,6 +26,8 @@ it("should process staged files on pre-commit", () => {
   }
 
   expect(stdout).toBeDefined();
-  expect(stdout.replace(/[0-9]+ms/g, "XXms")).toMatchSnapshot("pre-commit error output");
+  expect(unifyTmpDir(stdout.replace(/[0-9]+ms/g, "XXms"))).toMatchSnapshot(
+    "pre-commit error output",
+  );
   expect(read(`${CLIENT_DIR}/src/on-stage.js`)).toMatchSnapshot("formatted js file");
 });

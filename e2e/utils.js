@@ -12,3 +12,7 @@ export const write = (filePath, content) => fs.writeFileSync(filePath, content);
 export const fileExists = filePath => fs.existsSync(filePath);
 
 export const cleanSrcDirectory = () => rimraf.sync(`${CLIENT_DIR}/src/*`);
+
+// convert /private/tmp (mac os /tmp symlink) to /tmp
+// to avoid differences in CI output
+export const unifyTmpDir = output => output.replace(/\/private\/tmp/g, "/tmp");

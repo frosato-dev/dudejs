@@ -1,4 +1,4 @@
-import { exec, write, cleanSrcDirectory } from "./utils";
+import { exec, write, cleanSrcDirectory, unifyTmpDir } from "./utils";
 import { CLIENT_DIR } from "./constants";
 
 const FILE_1_PATH = `${CLIENT_DIR}/src/toLint-1.js`;
@@ -18,5 +18,5 @@ it("should lint all .js files under `src` directory", () => {
     stdout = err.stdout.toString();
   }
   expect(stdout).toBeDefined();
-  expect(stdout).toMatchSnapshot();
+  expect(unifyTmpDir(stdout)).toMatchSnapshot();
 });
