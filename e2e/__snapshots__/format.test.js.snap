@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should format all .js files under \`src\` directory: file 1 content 1`] = `
+"const hello = 'Hello'
+"
+`;
+
+exports[`should format all .js files under \`src\` directory: file 2 content 1`] = `
+"const addOne = number => number + 1
+"
+`;

@@ -1,20 +1,22 @@
-import fs from "fs";
-import { execSync } from "child_process";
+import { exec, write, cleanSrcDirectory } from "./utils";
 import { CLIENT_DIR } from "./constants";
 
-const FILE_PATH = `${CLIENT_DIR}/src/toLint.js`;
+const FILE_1_PATH = `${CLIENT_DIR}/src/toLint-1.js`;
+const FILE_2_PATH = `${CLIENT_DIR}/src/toLint-2.js`;
 
 beforeAll(() => {
-  fs.writeFileSync(FILE_PATH, `const unused = 1`);
+  cleanSrcDirectory();
+  write(FILE_1_PATH, `const unused = 1`);
+  write(FILE_2_PATH, `console.log('Hello')`);
 });
 
-it("should pass", () => {
+it("should lint all .js files under `src` directory", () => {
   let stdout;
   try {
-    execSync("./node_modules/.bin/dudejs lint", { cwd: CLIENT_DIR });
+    exec("./node_modules/.bin/dudejs lint");
   } catch (err) {
     stdout = err.stdout.toString();
   }
   expect(stdout).toBeDefined();
-  expect(stdout).toMatch(/error  'unused' is assigned a value but never used/);
+  expect(stdout).toMatchSnapshot();
 });
