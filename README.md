@@ -19,8 +19,9 @@
 [prettier-config-path]: /src/configs/prettierrc.js
 [eslint-config-path]: /src/configs/eslintrc.js
 
-
-# DudeJS
+<h1 align="center">
+  <img src="https://user-images.githubusercontent.com/11709778/41068585-743ad790-69ea-11e8-8bdc-1907f4868cb4.png" alt="svgr" title="svgr" width="300">
+</h1>
 
 Tired of setup but you like to roll you project like a booling ball: formatting and linting your code while insuring consistent commit messages.
 The dude to the rescue!
@@ -79,3 +80,7 @@ Thanks goes to these people :
 This project follows the
 [all-contributors](https://github.com/kentcdodds/all-contributors)
 specification. Contributions of any kind are welcome!
+
+## Credits
+
+Dude.js logo by [zedouze](https://www.instagram.com/zedouze/)
