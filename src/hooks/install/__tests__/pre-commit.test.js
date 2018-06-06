@@ -65,7 +65,7 @@ it("should write file into correct path", () => {
   expect(mockReadPkgUp).toHaveBeenCalledWith({ cwd: "user/project" });
   expect(mockWriteFileSync).toHaveBeenCalledWith(
     "user/project/.git/hooks/pre-commit",
-    expect.stringMatching(/npm run dude:format\nnpm run dude:lint/),
+    expect.stringMatching(/npx dudejs staged/),
     { mode: 493 },
   );
 });

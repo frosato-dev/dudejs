@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should lint all .js files under \`src\` directory 1`] = `
+"
+/tmp/dudejs-client/src/toLint-1.js
+  1:7  error  'unused' is assigned a value but never used  no-unused-vars
+
+/tmp/dudejs-client/src/toLint-2.js
+  1:1  error  Unexpected console statement  no-console
+
+✖ 2 problems (2 errors, 0 warnings)
+
+"
+`;
