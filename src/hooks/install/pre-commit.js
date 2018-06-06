@@ -28,7 +28,7 @@ export default () => {
     process.exit();
   }
 
-  const fileContent = writeWithinCommentTemplate(["npm run dude:format", "npm run dude:lint"]);
+  const fileContent = writeWithinCommentTemplate(["npx dudejs staged"]);
   fs.writeFileSync(filePath, fileContent, { mode: 0o755 });
 
   //eslint-disable-next-line
