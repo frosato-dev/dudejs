@@ -52,7 +52,7 @@ sgf((err, results) => {
       console.log("❌  Sorry dude, you have to fix your error(s) and commit again, be strong!");
       process.exit(1);
     } else {
-      console.log("✅  Everything is fine dude!");
+      console.log("✅  Your files are fine dude!");
     }
   }
 });

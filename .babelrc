@@ -9,6 +9,10 @@
   ],
   "plugins": [
     "transform-object-rest-spread",
-    "transform-es2015-destructuring"
+    "transform-es2015-destructuring",
+    ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }]
   ]
 }
