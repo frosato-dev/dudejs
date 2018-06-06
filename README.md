@@ -38,7 +38,7 @@ $ npm i dudejs --save-dev
 ```
 or
 ```sh
-$ yarn dudejs --dev
+$ yarn add dudejs --dev
 ```
 
 and... you are done !
