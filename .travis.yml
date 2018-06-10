@@ -4,11 +4,22 @@ cache:
 node_js:
 - '8.4'
 
+stages:
+  - test
+  - name: release
+    if: branch = testo
+
 jobs:
   include:
-    - stage: Tests
+    - stage: test
       node_js: node
-      script: 
-        - jest src --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-        - npm run e2e
-        
+      script: jest src --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+      script: npm run e2e
+    - stage: release
+      script: echo "it works"
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - echo "it works"
+
