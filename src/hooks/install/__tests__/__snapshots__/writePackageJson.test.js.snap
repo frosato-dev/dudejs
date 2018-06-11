@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should write new package.json with commands 1`] = `
+Array [
+  "/projectPath/package.json",
+  "{
+  \\"name\\": \\"some project\\",
+  \\"scripts\\": {
+    \\"start\\": \\"node start\\",
+    \\"test\\": \\"jest test\\",
+    \\"dude:fmt\\": \\"dudejs format\\",
+    \\"dude:lint\\": \\"dudejs lint\\"
+  }
+}",
+  Object {
+    "mode": 493,
+  },
+]
+`;
