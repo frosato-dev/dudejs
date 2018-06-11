@@ -1,6 +1,6 @@
 {
     "name": "dudejs",
-    "version": "0.1.0",
+    "version": "0.0.0-development",
     "description": "A zero config tool for quality code",
     "license": "MIT",
     "author": "",
@@ -65,7 +65,8 @@
         "jest": "^22.4.4",
         "lint-staged": "^4.2.2",
         "mock-fs": "^4.5.0",
-        "rimraf": "^2.6.2"
+        "rimraf": "^2.6.2",
+        "semantic-release": "^15.5.1"
     },
     "dependencies": {
         "babel-eslint": "^8.2.2",
