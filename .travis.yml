@@ -4,11 +4,22 @@ cache:
 node_js:
 - '8.4'
 
+stages:
+  - test
+  - name: release
+    if: branch = master
+
 jobs:
   include:
-    - stage: Tests
-      node_js: node
-      script: 
+    - stage: test
+      script:
         - jest src --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
         - npm run e2e
-        
+    - stage: release
+      script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
+
