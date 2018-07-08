@@ -3,19 +3,16 @@ import fs from "fs";
 import readPkgUp from "read-pkg-up";
 import writeWithinCommentTemplate from "./../../utils/writeWithinCommentTemplate";
 
-const modulePath = fs.realpathSync(process.cwd());
-const clientProjectPath = path.join(modulePath, "../..");
-const gitHookPath = path.join(clientProjectPath, ".git", "hooks");
-
-export default () => {
-  const { pkg: packageJson } = readPkgUp.sync({ cwd: clientProjectPath });
+export default cwd => {
+  const { pkg: packageJson } = readPkgUp.sync({ cwd });
+  const gitHookPath = path.join(cwd, ".git", "hooks");
 
   if (!packageJson) {
     //eslint-disable-next-line
     console.log(
       "❌ DudeJS was not able to add pre-commit hook, come on dude did you forget to git init?",
     );
-    process.exit();
+    return process.exit();
   }
 
   const filePath = path.join(gitHookPath, "pre-commit");
@@ -25,7 +22,7 @@ export default () => {
     console.log(
       "😎 Seems you already have a pre-commit hook, DudeJS hasn't done anything and he likes it.",
     );
-    process.exit();
+    return process.exit();
   }
 
   const fileContent = writeWithinCommentTemplate(["npx dudejs staged"]);

@@ -12,7 +12,6 @@ jest.mock("read-pkg-up", () => ({
 }));
 
 jest.mock("fs", () => ({
-  realpathSync: jest.fn(data => data),
   existsSync: mockExistsSync,
   writeFileSync: mockWriteFileSync,
 }));
@@ -26,7 +25,7 @@ it("should do nothing if no package.json found", () => {
   mockReadPkgUp.mockReturnValue({ pkg: null });
 
   const precommit = require("../pre-commit").default;
-  precommit();
+  precommit("/projectPath");
 
   expect(console.log).toHaveBeenCalledWith(expect.stringMatching("❌"));
   expect(process.exit).toHaveBeenCalledTimes(1);
@@ -37,7 +36,7 @@ it("should do nothing if pre-commit hooks already exits", () => {
   mockExistsSync.mockReturnValue(true);
 
   const precommit = require("../pre-commit").default;
-  precommit();
+  precommit("/projectPath");
 
   expect(console.log).toHaveBeenCalledWith(expect.stringMatching("😎"));
   expect(process.exit).toHaveBeenCalledTimes(1);
@@ -48,23 +47,21 @@ it("should write file pre-commit does not exits yet", () => {
   mockExistsSync.mockReturnValue(false);
 
   const precommit = require("../pre-commit").default;
-  precommit();
+  precommit("/projectPath");
 
   expect(console.log).toHaveBeenCalledWith(expect.stringMatching("✅"));
   expect(mockWriteFileSync).toHaveBeenCalledTimes(1);
 });
 
 it("should write file into correct path", () => {
-  mockReadPkgUp.mockReturnValue({ cwd: "user/project" });
-
-  global.process.cwd = () => "user/project/node_modules/dudejs";
+  mockReadPkgUp.mockReturnValue({ pkg: { name: "some project" } });
 
   const precommit = require("../pre-commit").default;
-  precommit();
+  precommit("/projectPath");
 
-  expect(mockReadPkgUp).toHaveBeenCalledWith({ cwd: "user/project" });
+  expect(mockReadPkgUp).toHaveBeenCalledWith({ cwd: "/projectPath" });
   expect(mockWriteFileSync).toHaveBeenCalledWith(
-    "user/project/.git/hooks/pre-commit",
+    "/projectPath/.git/hooks/pre-commit",
     expect.stringMatching(/npx dudejs staged/),
     { mode: 493 },
   );
