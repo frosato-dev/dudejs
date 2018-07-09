@@ -1,6 +1,6 @@
 /* eslint no-console: 0 */
 import addHook from "../../utils/addHook";
-import precommit from "../pre-commit";
+import commitMsg from "../commit-msg";
 
 jest.mock("../../utils/addHook");
 const mockAddHook = jest.fn();
@@ -11,11 +11,11 @@ afterEach(() => {
 });
 
 it("should call addHook method once", () => {
-  precommit();
+  commitMsg();
   expect(mockAddHook).toHaveBeenCalledTimes(1);
 });
 
 it("should call addHook with good arguments", () => {
-  precommit();
-  expect(mockAddHook).toHaveBeenCalledWith("pre-commit", ["npx dudejs staged"]);
+  commitMsg();
+  expect(mockAddHook).toHaveBeenCalledWith("commit-msg", ["npx dudejs msg ${1}"]);
 });
