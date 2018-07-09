@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should fail with wrong commit message: commit-lint error output 1`] = `
+"src/commit-lint.js XXms
+✅  Your files are fine dude!
+⚠️️   Commit message : type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test]
+❌  Sorry dude, your commit message sucks
+"
+`;
+
+exports[`should have a commit-msg file 1`] = `
+"
+#### DudeJS - START ####
+npx dudejs msg \${1}
+#### DudeJS - END ####
+"
+`;
+
+exports[`should pass with valid commit message: commit-lint success 1`] = `
+"<COMMIT_INFO> test: ci
+ 1 file changed, 1 insertion(+)
+ create mode 100644 src/commit-lint.js
+"
+`;

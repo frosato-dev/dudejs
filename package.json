@@ -52,12 +52,13 @@
         "uninstall:hooks": "[ ! -d dist ] || node dist/hooks/uninstall/index.js"
     },
     "devDependencies": {
-        "@commitlint/cli": "^6.1.3",
+        "@commitlint/cli": "^6.2.0",
         "@commitlint/config-conventional": "^6.1.3",
         "all-contributors-cli": "^4.11.1",
         "babel-cli": "^6.26.0",
         "babel-plugin-transform-es2015-destructuring": "6.19.0",
         "babel-plugin-transform-object-rest-spread": "6.20.2",
+        "babel-plugin-transform-runtime": "^6.23.0",
         "babel-preset-env": "^1.6.1",
         "babel-preset-latest": "^6.24.1",
         "coveralls": "^3.0.1",
@@ -70,6 +71,8 @@
         "semantic-release": "^15.5.1"
     },
     "dependencies": {
+        "@commitlint/lint": "^7.0.0",
+        "@commitlint/load": "^7.0.0",
         "babel-eslint": "^8.2.2",
         "commander": "^2.15.1",
         "eslint": "^4.18.2",
