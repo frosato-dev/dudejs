@@ -42,13 +42,14 @@
         "build": "babel src -d dist --ignore '**/*.test.js'",
         "prepublish": "npm run build",
         "postinstall": "npm run install:hooks",
+        "postuninstall": "npm run uninstall:hooks",
         "deploy": "npm publish",
         "contributors:add": "all-contributors add",
         "contributors:generate": "all-contributors generate",
         "preversion": "npm test && npm run build",
         "postversion": "git push && git push --tags",
         "install:hooks": "[ ! -d dist ] || node dist/hooks/install/index.js",
-        "uninstall:hooks": "node dist/hooks/uninstall/index.js"
+        "uninstall:hooks": "[ ! -d dist ] || node dist/hooks/uninstall/index.js"
     },
     "devDependencies": {
         "@commitlint/cli": "^6.2.0",
